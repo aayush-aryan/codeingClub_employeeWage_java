@@ -1,8 +1,8 @@
 package org.bridgelabz.employeewagecomputation;
 
+import java.util.ArrayList;
+
 public class EmployeeWageComputation{
-	
-	
 	
 	public static final int IS_PART_TIME = 1;
 	public static final int IS_FULL_TIME = 2;
@@ -13,8 +13,6 @@ public class EmployeeWageComputation{
 	private final int maxHoursPerMonth;
 	
 	
-	
-
 public EmployeeWageComputation(String company, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth) {
 		
 		Company = company;
@@ -53,9 +51,13 @@ public EmployeeWageComputation(String company, int empRatePerHour, int numOfWork
 	{
 		EmployeeWageComputation samsung = new EmployeeWageComputation("SAMSUNG", 30, 20,100);
 		EmployeeWageComputation apple = new EmployeeWageComputation("Apple", 130, 20,100);
-
-		System.out.println("Total Emp wage for Company " + samsung.Company +" is "+samsung.computeEmpWage());
-		System.out.println("Total Emp wage for Company " + apple.Company +" is "+apple.computeEmpWage());
+		ArrayList<Object> arraylist = new ArrayList<Object>();
+		arraylist.add(samsung.Company);
+		arraylist.add(samsung.computeEmpWage());
+		arraylist.add(apple.Company);
+		arraylist.add(apple.computeEmpWage());
+		System.out.println(arraylist);
+		
 	}
 	
 }
